@@ -7,3 +7,5 @@
 #		define BLINK_API __declspec(dllimport)
 #	endif
 #endif
+
+#define BIT(x) (1 << x) // will be used to create bitmask values
