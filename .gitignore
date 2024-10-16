@@ -12,6 +12,8 @@ bin-int
 *.vcxproj.user
 *.vcxproj.filters
 *.vcxproj.filters.user
-
-# Visual Studio temp files
+*.sln
 *.log
+
+Blink/Blink.vcxproj
+Sandbox/Sandbox.vcxproj
