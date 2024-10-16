@@ -3,7 +3,15 @@
 bin
 bin-int
 
-# Files
-*.user
-*.vcxproj
-*.sln
+# VS Code files
+.vscode/
+
+# Visual Studio 2019/2022 cache/options directories
+.vs/
+.vscode/
+*.vcxproj.user
+*.vcxproj.filters
+*.vcxproj.filters.user
+
+# Visual Studio temp files
+*.log
