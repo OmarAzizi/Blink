@@ -17,6 +17,9 @@ workspace "Blink"
 		targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 		objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 	
+		pchheader "blinkpch.h"
+		pchsource "Blink/src/blinkpch.cpp"
+
 		files {
 			"%{prj.name}/src/**.h",
 			"%{prj.name}/src/**.cpp"

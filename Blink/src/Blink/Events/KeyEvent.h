@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Blink {
 	class BLINK_API KeyEvent : public Event {
 	public:

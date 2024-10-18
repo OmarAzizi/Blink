@@ -1,3 +1,4 @@
+#include "blinkpch.h"
 #include "Application.h"
 
 #include <Blink/Events/KeyEvent.h>

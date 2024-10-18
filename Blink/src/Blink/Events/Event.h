@@ -2,9 +2,6 @@
 
 #include "Blink/Core.h"
 
-#include <string>
-#include <functional>
-
 namespace Blink {
 	/* Events in Blink are currently blocking */
 	enum class EventType {
