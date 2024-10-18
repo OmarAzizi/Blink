@@ -3,10 +3,11 @@
 
 #include <Blink/Events/KeyEvent.h>
 #include "Blink/Log.h"
+#include "GLFW/glfw3.h"
 
 namespace Blink {
 	Application::Application() {
-		
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
 	Application::~Application() {
@@ -14,17 +15,10 @@ namespace Blink {
 	}
 
 	void Application::Run() {
-		// Arbitrary
-		KeyPressedEvent e(5, 10);
-
-		if (e.IsInCategory(EventCategoryMouse)) {
-			BLINK_TRACE(e);
+		while (m_IsRunning) {
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
-
-		if (e.IsInCategory(EventCategoryInput)) {
-			BLINK_TRACE(e);
-		}
-
-		while (true);
 	}
 }

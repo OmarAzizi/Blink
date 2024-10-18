@@ -1,5 +1,6 @@
 #pragma once
 
+#include "blinkpch.h"
 #include "Event.h"
 
 namespace Blink {
@@ -10,7 +11,7 @@ namespace Blink {
 
 		inline float GetX() const { return m_MouseX; }
 		inline float GetY() const { return m_MouseY; }
-
+		
 		std::string ToString() const override {
 			std::stringstream ss;
 			ss << "MouseMovedEvent: " << GetX() << ", " << GetY();
