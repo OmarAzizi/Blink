@@ -9,6 +9,12 @@ workspace "Blink"
 
 	outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+	-- Include directories relative to root folder (solution directory)
+	IncludeDir = {}
+	IncludeDir["GLFW"] = "Blink/vendor/GLFW/include"
+
+	include "Blink/vendor/GLFW" -- include premake5 file
+
 	project "Blink"
 		location "Blink"
 		kind "SharedLib"
@@ -27,7 +33,13 @@ workspace "Blink"
 	
 		includedirs {
 			"%{prj.name}/src",
-			"%{prj.name}/vendor/spdlog/include"
+			"%{prj.name}/vendor/spdlog/include",
+			"%{IncludeDir.GLFW}"
+		}
+
+		links {
+			"GLFW",
+			"opengl32.lib"
 		}
 	
 		filter "system:windows"
